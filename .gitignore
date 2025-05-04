@@ -1,3 +1,4 @@
+
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
 
@@ -66,5 +67,24 @@ testem.log
 /typings
 
 # System files
+
+# Dependências
+node_modules/
+.npm
+.pnpm
+
+# Ambiente
+dist/
+.ionic/
+.sass-cache/
+.env
+*.tmp
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema
+
 .DS_Store
 Thumbs.db

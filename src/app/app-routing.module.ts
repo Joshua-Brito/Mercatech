@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { DetalhesPage } from './detalhes/detalhes.page';
 
 const routes: Routes = [
   {
@@ -10,6 +11,10 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'detalhes',
+    loadComponent: () => import('./detalhes/detalhes.page').then(m => m.DetalhesPage)
   },
 ];
 

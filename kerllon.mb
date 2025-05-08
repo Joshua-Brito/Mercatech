@@ -1,0 +1,41 @@
+# Contribuição de Kerllon Victor - Parte B (Integração com API)
+
+## 📌 Responsabilidades
+- Configuração do serviço de API (`ApiService`)
+- Integração com a Fake Store API
+- Solução de problemas de CORS
+- Garantia da qualidade dos dados recebidos
+
+## 🛠 Tecnologias Utilizadas
+- Ionic 7 + Angular 16
+- HttpClient (Angular)
+- RxJS (Observables)
+- Proxy Configuration
+
+## ✅ Tarefas Concluídas
+1. **Criação do ApiService**
+   - Implementação do método `getProducts()`
+   - Tratamento de erros com RxJS
+
+2. **Configuração do Proxy**
+   - Criação do arquivo `proxy.conf.json`
+   - Ajuste no `angular.json` para desenvolvimento local
+
+3. **Testes e Validação**
+   - Verificação dos dados no console
+   - Teste de falha de conexão
+
+4. **Documentação**
+   - Atualização do README.md com instruções de configuração
+
+## 💡 Dificuldades e Soluções
+| Problema | Solução |
+|----------|---------|
+| Erro de CORS | Configuração de proxy local |
+| Dados não carregando | Correção da URL base no service |
+| Erro 404 no GitHub Codespaces | Adaptação para ambiente remoto |
+
+## 📝 Notas Adicionais
+"O maior desafio foi configurar o proxy para funcionar tanto localmente quanto no Codespace, mas a solução trouxe um aprendizado valioso sobre configuração de ambientes."
+
+Arquivo atualizado em: 08/05/2025

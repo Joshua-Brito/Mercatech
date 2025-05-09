@@ -1,0 +1,11 @@
+{
+  "name": "Ionic Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "postCreateCommand": "npm install -g @ionic/cli && npm install",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": ["dbaeumer.vscode-eslint"]
+    }
+  }
+}

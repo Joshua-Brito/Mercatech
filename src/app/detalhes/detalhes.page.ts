@@ -20,6 +20,7 @@ export class DetalhesPage implements OnInit {
     this.apiService.getProducts().subscribe({
       next: (data) => {
         this.products = data;
+        console.log('Dados recebidos:', data);
       },
       error: (err) => {
         console.error('Erro na API:', err);

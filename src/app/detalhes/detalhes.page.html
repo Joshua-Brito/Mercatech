@@ -1,13 +1,18 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>detalhes</ion-title>
+    <ion-title>Produtos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">detalhes</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <ion-list>
+    <!-- ngFor para listar cada produto -->
+    <ion-item *ngFor="let product of products">
+      <ion-label>
+        <h2>{{ product.title }}</h2>
+        <p>{{ product.description }}</p>
+        <p><strong>Preço:</strong> {{ product.price | currency:'USD' }}</p> <!-- Pipe de moeda -->
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

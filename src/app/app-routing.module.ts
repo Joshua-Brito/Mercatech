@@ -25,3 +25,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+// Configuração de rotas feita por Joshua-Brito – Parte A
+

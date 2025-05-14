@@ -1,19 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Produtos</ion-title>
+    <ion-title>Detalhes</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content>
   <ion-list>
-    <!-- ngFor para listar cada produto -->
-    <ion-item *ngFor="let product of products">
+    <!-- Pipe personalizado + diretiva + ngFor -->
+    <ion-item *ngFor="let p of products" appDestaque>
       <ion-label>
-        <h2>{{ product.title }}</h2>
-        <p>{{ product.description }}</p>
-        <p><strong>Preço:</strong> {{ product.price | currency:'USD' }}</p> <!-- Pipe de moeda -->
+        <h2>{{ p.title | maiuscula }}</h2>  <!-- Pipe personalizado -->
+        <p>{{ p.description | slice:0:100 }}...</p>  <!-- Pipe built-in -->
       </ion-label>
+    </ion-item>
+
+    <!-- ngIf para lista vazia -->
+    <ion-item *ngIf="products.length === 0">
+      <ion-label>Nenhum produto encontrado.</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
-<!-- Criado por Joshua-Brito -->

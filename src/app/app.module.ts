@@ -22,3 +22,4 @@ import { AppRoutingModule } from './app-routing.module';
     bootstrap: [AppComponent]
 })
 export class AppModule {}  // Corrigido de [] para {}
+ 

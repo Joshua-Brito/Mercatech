@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastro</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="form" (ngSubmit)="enviar()">
+    <ion-item>
+      <ion-label position="floating">Título</ion-label>
+      <ion-input formControlName="titulo"></ion-input>
+    </ion-item>
+    <!-- Mensagem de erro para o campo título (opcional, mas boa prática) -->
+    <div *ngIf="form.get(\'titulo\')?.invalid && (form.get(\'titulo\')?.dirty || form.get(\'titulo\')?.touched)" style="color: red; font-size: small; padding-left: 16px;">
+      <div *ngIf="form.get(\'titulo\')?.errors?.["required"]">
+        Título é obrigatório.
+      </div>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-textarea formControlName="descricao"></ion-textarea>
+    </ion-item>
+    <!-- Mensagem de erro para o campo descrição (opcional, mas boa prática) -->
+    <div *ngIf="form.get(\'descricao\')?.invalid && (form.get(\'descricao\')?.dirty || form.get(\'descricao\')?.touched)" style="color: red; font-size: small; padding-left: 16px;">
+      <div *ngIf="form.get(\'descricao\')?.errors?.["required"]">
+        Descrição é obrigatória.
+      </div>
+      <div *ngIf="form.get(\'descricao\')?.errors?.["minlength"]">
+        Descrição deve ter no mínimo 10 caracteres.
+      </div>
+    </div>
+
+    <ion-button expand="block" type="submit" [disabled]="form.invalid" style="margin-top: 20px;">Enviar</ion-button>
+  </form>
+</ion-content>
+
